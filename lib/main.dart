@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           child: Center(
-            child: Text('Weather'),
+            child: Text(
+              'Weather',
+              style: TextStyle(color: Colors.blue, fontSize: 24.0),
+            ),
           ),
         ),
       ),
