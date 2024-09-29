@@ -7,20 +7,18 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Projekt 12',
-      home:  Scaffold(
+      home: Scaffold(
         appBar: AppBar(
           title: Text('Welcome to Weather-App'),
         ),
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          color: Colors.blueGrey,
           child: Center(
             child: Text('Weather'),
           ),
         ),
-        ),
       ),
-    )
+    );
   }
 }
