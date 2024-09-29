@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
+import 'weather_data.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WeatherData weatherData = WeatherData(
+    city: 'Leipzig',
+    temperature: 35.5,
+    weatherCondition: 'Raining',
+  );
+
+  runApp(MyApp(weatherData: weatherData));
+}
 
 class MyApp extends StatelessWidget {
+  final WeatherData weatherData;
+
+  MyApp({required this.weatherData});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,7 +40,7 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'City: Leipzig',
+                'City: ${weatherData.city}',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 30.0,
@@ -35,7 +48,7 @@ class MyApp extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Text(
-                'Temperature: 35°C',
+                'Temperature: ${weatherData.temperature}°C',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24.0,
@@ -43,7 +56,7 @@ class MyApp extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               Text(
-                'Weather: Windy',
+                'Weather: ${weatherData.weatherCondition}',
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: 24.0,
