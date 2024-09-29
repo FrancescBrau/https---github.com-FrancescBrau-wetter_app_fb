@@ -9,7 +9,14 @@ class MyApp extends StatelessWidget {
       title: 'Projekt 12',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Weather-App'),
+          title: Text(
+            'Welcome to Weather-App',
+            style: TextStyle(
+              fontSize: 26.0,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: Colors.blue,
         ),
         body: Container(
           width: double.infinity,
@@ -17,18 +24,31 @@ class MyApp extends StatelessWidget {
           color: const Color.fromARGB(255, 202, 238, 255),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 'City: Leipzig',
-                style: TextStyle(color: Colors.blue, fontSize: 24.0),
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 30.0,
+                ),
+                textAlign: TextAlign.center,
               ),
               Text(
                 'Temperature: 35°C',
-                style: TextStyle(color: Colors.blue, fontSize: 24.0),
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24.0,
+                ),
+                textAlign: TextAlign.center,
               ),
               Text(
                 'Weather: Windy',
-                style: TextStyle(color: Colors.blue, fontSize: 24.0),
+                style: TextStyle(
+                  color: Colors.blue,
+                  fontSize: 24.0,
+                ),
+                textAlign: TextAlign.center,
               ),
             ],
           ),
