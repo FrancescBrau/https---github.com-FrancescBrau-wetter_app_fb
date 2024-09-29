@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'weather_data.dart';
+import 'package:flutter_application_1/weather_data.dart';
+import 'weather_repository.dart';
 
 void main() {
-  WeatherData weatherData = WeatherData(
-    city: 'Leipzig',
-    temperature: 35.5,
-    weatherCondition: 'Raining',
-  );
+  WeatherRepository weatherRepository = WeatherRepository();
+  WeatherData weatherData = weatherRepository.getWeatherData();
 
   runApp(MyApp(weatherData: weatherData));
 }
@@ -14,7 +12,7 @@ void main() {
 class MyApp extends StatelessWidget {
   final WeatherData weatherData;
 
-  MyApp({required this.weatherData});
+  const MyApp({super.key, required this.weatherData});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Projekt 12',
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Welcome to Weather-App',
             style: TextStyle(
               fontSize: 26.0,
@@ -41,7 +39,7 @@ class MyApp extends StatelessWidget {
             children: [
               Text(
                 'City: ${weatherData.city}',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.blue,
                   fontSize: 30.0,
                 ),
@@ -49,7 +47,7 @@ class MyApp extends StatelessWidget {
               ),
               Text(
                 'Temperature: ${weatherData.temperature}°C',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.blue,
                   fontSize: 24.0,
                 ),
@@ -57,7 +55,7 @@ class MyApp extends StatelessWidget {
               ),
               Text(
                 'Weather: ${weatherData.weatherCondition}',
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.blue,
                   fontSize: 24.0,
                 ),
