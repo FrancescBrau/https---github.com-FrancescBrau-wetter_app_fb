@@ -14,11 +14,23 @@ class MyApp extends StatelessWidget {
         body: Container(
           width: double.infinity,
           height: double.infinity,
-          child: Center(
-            child: Text(
-              'Weather',
-              style: TextStyle(color: Colors.blue, fontSize: 24.0),
-            ),
+          color: const Color.fromARGB(255, 202, 238, 255),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'City: Leipzig',
+                style: TextStyle(color: Colors.blue, fontSize: 24.0),
+              ),
+              Text(
+                'Temperature: 35°C',
+                style: TextStyle(color: Colors.blue, fontSize: 24.0),
+              ),
+              Text(
+                'Weather: Windy',
+                style: TextStyle(color: Colors.blue, fontSize: 24.0),
+              ),
+            ],
           ),
         ),
       ),
